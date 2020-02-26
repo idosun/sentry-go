@@ -9,7 +9,7 @@
 ## Setup & Build
 
 - Clone this repo and cd into the directory
-- Run `make deploy` to build the binary `sentry-go-demo`, create a new release, assign git commits and start the server run
+- Run `make deploy` to build the binary `sentry-go-demo`, create a new release, assign git commits and start the server
 - The Go HTTP Server will be available on `http://localhost:3002`
 
 ## Demo Specs
