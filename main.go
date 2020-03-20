@@ -97,6 +97,7 @@ func generateSentryError(rw http.ResponseWriter, r *http.Request) {
 	}
 }
 
+
 func sendSentryCaptureMessage(rw http.ResponseWriter, r *http.Request) {
 	if hub := sentry.GetHubFromContext(r.Context()); hub != nil {
 		hub.CaptureMessage("Send this message to Sentry")
