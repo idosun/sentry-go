@@ -11,6 +11,8 @@ import (
 	sentryhttp "github.com/getsentry/sentry-go/http"
 	"github.com/rs/cors"
 	"github.com/ulule/deepcopier"
+	// "github.com/lightstep/lightstep-tracer-go"
+	// "github.com/opentracing/opentracing-go"
 )
 
 //Product in the Inventory
@@ -183,10 +185,21 @@ func main() {
 
 	http.Handle("/", c.Handler(sentryHandler.Handle(c.Handler(&handler{}))))
 
-	fmt.Println("Go Server listening on port 3002...")
+	fmt.Println("Go Server listening on port 5002...")
 
-	if err := http.ListenAndServe(":3002", nil); err != nil {
+	if err := http.ListenAndServe(":5002", nil); err != nil {
 		panic(err)
 	}
 
 }
+
+// func initLightTracer() {
+// 	lightStepTracer := lightstep.NewTracer(lightstep.Options{
+// 		Collector:   lightstep.Endpoint{},
+// 		AccessToken: "1ogVmDF7bHKSGd7r/2FlADQDsiPxOHcXlYsgWhkyNqwIUBkoE0A7N0L2AW/x4xntr2MsHngZVbeTh2RkuJ87LtT+2FbJWGWDAkKDLQS2",
+// 		Tags: map[string]interface{}{
+// 			lightstep.ComponentNameKey: "idotest",
+// 		},
+// 	})
+// 	opentracing.SetGlobalTracer(lightStepTracer)
+// }

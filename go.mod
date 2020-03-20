@@ -4,6 +4,8 @@ require (
 	github.com/getsentry/sentry-go v0.5.1
 	github.com/guregu/null v3.4.0+incompatible // indirect
 	github.com/lib/pq v1.2.0 // indirect
+	github.com/lightstep/lightstep-tracer-go v0.19.0
+	github.com/opentracing/opentracing-go v1.1.0
 	github.com/rs/cors v1.6.0
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/stretchr/objx v0.2.0 // indirect
